@@ -1,0 +1,35 @@
+/*VARIABLE*/
+
+$colorP: rgb(22, 8, 8);
+
+p{
+    color: $colorP;
+
+}
+/* EXTEND*/
+.seccionImportante{
+    color: rgb(32, 28, 28);
+    font-size: 20px;
+    font-family:'Ubuntu', sans-serif; 
+    letter-spacing: 1px;
+    word-spacing: 10;
+    line-height: 20px;
+    text-align: left;
+    margin: 30px;
+    padding-top: 50px;
+}
+h3{
+    @extend .seccionImportante;
+}
+/*MIXIN*/
+    @mixin mensaje ($colorBorde, $colorFondo, $estiloBorde){
+    border-style: solid;
+    border-top-color: black;
+    border-left-color:black;
+    border-right-color: black;
+    border-bottom-color:black;
+    background-color: white
+}
+.table{
+    @include mensaje (black, white, solid)
+}
